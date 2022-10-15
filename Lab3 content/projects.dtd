@@ -1,0 +1,48 @@
+<!ELEMENT projects (company,project+)>
+<!ELEMENT company (companyName,companyAddress,logo,webAddress?,email,phone+)>
+<!ELEMENT companyName (#PCDATA)>
+<!ELEMENT companyAddress (#PCDATA)>
+<!ELEMENT logo (#PCDATA)>
+<!ELEMENT webAddress (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT project (title ,managers ,teams,clients*,projectDate,projectComments )>
+<!ATTLIST project
+     projid CDATA #REQUIRED
+
+>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT managers (manager+)>
+<!ELEMENT manager (firstName,middleName?,lastName,managerPhone,managerEmail*)>
+<!ELEMENT firstName (#PCDATA)>
+<!ELEMENT middleName (#PCDATA)>
+<!ELEMENT lastName (#PCDATA)>
+<!ELEMENT managerPhone (#PCDATA)>
+
+
+
+<!ATTLIST managerPhone type (managerHome|managerOffice) "managerHome">
+<!ELEMENT managerEmail (#PCDATA)>
+<!ELEMENT teams (team)>
+<!ELEMENT team (leader ,developer+,tester?,documenter*)>
+<!ELEMENT leader (#PCDATA)>
+<!ELEMENT developer (#PCDATA)>
+<!ELEMENT tester (#PCDATA)>
+<!ELEMENT documenter (#PCDATA)>
+<!ELEMENT clients (client*)>
+<!ELEMENT client (clientName,address,clientEmail,clientPhone)>
+<!ELEMENT clientName (#PCDATA)>
+<!ELEMENT address (street?,city,country, postalCode?)>
+<!ELEMENT street (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT postalCode (#PCDATA)>
+<!ELEMENT clientEmail (#PCDATA)>
+<!ELEMENT clientPhone (#PCDATA)>
+
+<!ELEMENT projectDate (#PCDATA)>
+<!ATTLIST projectDate
+     start CDATA #REQUIRED
+     end   CDATA #IMPLIED
+>
+<!ELEMENT projectComments (#PCDATA)>

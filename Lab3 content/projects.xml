@@ -1,0 +1,54 @@
+<?xml version="1.0" standalone="no"?>
+<!-- projects.xml             -->
+<!DOCTYPE projects SYSTEM "projects.dtd">
+
+<projects>
+	<company>
+		<companyName>Medical Com</companyName>
+		<companyAddress>12 medical Street</companyAddress>
+		<logo>ME</logo>
+		<webAddress>medicalCom.com</webAddress>
+		<email>dsd@gmail.com</email>
+		<phone>211-111-1111</phone>
+	</company>
+	<project projid  = "PO1">
+		<title>Pharmacy medicine Filter System</title>
+		<managers>
+			<manager>
+				<firstName>Devanshu</firstName>
+				<middleName>Maulik</middleName>
+				<lastName>Dave</lastName>
+				<managerPhone type="managerHome"></managerPhone>
+		
+				<managerEmail>dev@gmail</managerEmail>
+			
+			</manager>
+			
+		</managers>
+		<teams>
+			<team>
+				<leader>Adam</leader>
+				<developer>Nick</developer>
+				<tester>Oliver</tester>
+				<documenter>William</documenter>
+			</team>
+		</teams>
+		<clients>
+			<client>
+				<clientName>Liam</clientName>
+				<address>
+					<street>22 CLIENT street</street>
+					<city>Toronto</city>
+					<country>Canada</country>
+					<postalCode>S3E 3D3</postalCode>
+				</address>
+				<clientEmail>liam@gmail.com</clientEmail>
+				<clientPhone>2333333456</clientPhone>				
+			</client>
+		</clients>
+		
+		<projectDate start="23-09-2020" end="23-09-2022"></projectDate>
+		<projectComments>Good Project and will impact a buisness in a positive way</projectComments>
+	</project>
+
+</projects>
