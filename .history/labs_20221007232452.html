@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <style>
+      .navbar-nav {
+        margin-left: auto;
+        font-size: 23px;
+      }
+      .welcomeHeading {
+        text-shadow: 2px 2px red;
+        text-align: center;
+      }
+      .welcomeText {
+        text-align: center;
+        font-family: "Sofia", sans-serif;
+      }
+      .featurette-heading {
+        font-weight: 300;
+        line-height: 1;
+        letter-spacing: -0.05rem;
+        margin-top: 20%;
+      }
+      .profileIamge {
+        width: 250px;
+
+        left: 300px;
+      }
+      .mobileDevProfile {
+        margin-top: 10%;
+        left: 100px;
+      }
+      .main {
+        display: flex;
+        flex-wrap: nowrap;
+        height: 100vh;
+        height: -webkit-fill-available;
+        max-height: 100vh;
+        overflow-x: auto;
+        overflow-y: hidden;
+      }
+      .sideBar {
+        height: 870px;
+      }
+      li span{
+        position: absolute;
+         left: 100px;
+      }
+      .box{
+        display:contents;
+        flex-flow:column;
+        justify-content:left;
+        align-content: center;
+        align-items: center;
+       
+        }
+        .item{
+        flex: 1 1 auto;
+        border: 1px solid #ffebee;
+        }
+    </style>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <title>Mobile Development - Lab 2</title>
+  </head>
+  <body>
+    <div id="navBar">
+      <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Devanshu Dave</a>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav" mr-auto>
+            <li class="nav-item active">
+              <a class="nav-link" href="./index.html"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./course.html">Course</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div id="sideBar">
+        <div
+        class="d-flex flex-column flex-shrink-0 p-3 bg-light sideBar"
+        style="width: 280px"
+      >
+        <a
+          href="/"
+          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none"
+        >
+          <svg class="bi me-2" width="40" height="32">
+            <use xlink:href="#bootstrap" />
+          </svg>
+          <span class="fs-4">Home</span>
+        </a>
+        <hr />
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li>
+            <a href="index.html" class="nav-link link-dark">
+              <svg class="bi me-2" width="16" height="16">
+                <use xlink:href="#table" />
+              </svg>
+              Classwork
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="labs.html" class="nav-link" aria-current="page">
+              <svg class="bi me-2" width="16" height="16">
+                <use xlink:href="#home" />
+              </svg>
+              Labs
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link link-dark">
+              <svg class="bi me-2" width="16" height="16">
+                <use xlink:href="#speedometer2" />
+              </svg>
+              Project
+            </a>
+          </li>
+        </ul>
+        <hr />
+      </div>
+      <br />
+      <br />
+      <br />
+    </div></div>
+    <div id="mainBar"> 
+        <div class="jumbotron">
+            <h1>Labs Of Mobile Development 4201</h1>
+            <br/>
+            <div class="card text-center id="nav-tab" role="tablist"">
+                <div class="card-header">
+                  <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                      <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true" >Lab 1</a>
+                    </li>
+                    <li class="nav-item">
+                      <a  class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Lab 2</a>
+                    </li>
+                    
+                  </ul>
+                </div>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="card-body tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"">
+                    <h5 class="card-title">Lab 1</h5>
+                    <p class="card-text">
+                        Name : Devanshu Dave <br/>
+                        Course Code : MODE 4201<br/>
+                        Student ID : 100785733<br/>
+                        Title : Lab 1 – Individual work<br/>
+                        Date – 21/09/2022<br/>
+                        
+                    </p>
+                    <br/>
+                    <br/>
+                    <p>
+                    <b> Mobile Development – Mobile Operating System</b><br/><br/>
+                        
+                        •	When we go to the shop for purchasing the mobile device, now a days most common question we hear is “Do you prefer android or IOS?”. Now the question arises, what is exactly android and IOS. What’s the point to ask?. Well, to answer this question we have to dig more into the dept. But in short, Android and IOS are the part of types from many in mobile Operating systems. <br/>They are the main part which can change the user experience to use Mobile device. Its also a path between software and hardware part of the mobile device. <br/><br/><br/>
+                        •	Mobile Device is used in day-to-day life. From small things to big, mobiles have become the most important part of our life. To run the mobile device OS which is also known as Operating System is required. OS is very important part of the mobile device. Mostly Applications which run on the mobile is with the help of the OS present in the device. They are also known as communicator between software and hardware.<br/><br/>
+                        •	 There are various types of OS. But the two famous OS are Android and IOS. Most of the manufacturing companies have their own OS. Android devices (many manufacturing companies) have android OS. For example, Apple mobile phones have their own IOS which helps to run the iPhone devices. Android OS is used in Android devices like Samsung, Oppo, Vivo, MI etc.<br/><br/>
+                        •	 There are many advantages of Mobile Operating system. Along with that where there are advantages there are also disadvantages. <br/>
+    
+                    </p>
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                        
+                            <th scope="col">Advantages</th>
+                            <th scope="col">Disadvantages</th>
+                            
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            
+                            <td>Operating System helps us to run the mobile devices. 
+                                Or with the help of OS, we can use Mobile device in an 
+                                easy way in day-to-day life</td>
+                            <td>Costly. One of the disadvantage is that it is costly. 
+                                Though OS is an open source, but it costs the companies more.
+                                According to the survey, it states that the specific OS is costing providers more to service.</td>
+                        </tr>
+                        <tr>
+                            <td>Second Advantage is Security. Every OS provides their own security to protect the data  <br/>and has different ways to defend the hacking on mobile devices.
+                                <br/> For example, according to what I heard or experienced,<br/> Apple doesn’t allow many features ( apps or websites to access) in compared to android.<br/>
+                                Every operating system provides the security, IOS is considered as the most secured OS than any other.
+                                <br/>   “ According to Kaspersky Labs, nearly 1/3 of all mobile malware infections come from malicious SMS messages aimed at stealing personal information or money from people’s accounts. <br/>“ IOS secures the mobile device more than Android.
+                                As mentioned above, IOS secures and restricts the activity that is a threat than android.”</td>
+                            <td>  Complexity -  Various systems uses many languages in backend to run the OS on mobile devices. 
+                                <br/>  Like C++, Java, Kotlin etc. and can not be understood by any non-programmers.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                User Friendly – Though having GUI interface costs more and can be
+                                considered as a disadvantage. <br/>But that interface is a user friendly is considered as an advantage. 
+                                <br/> It gives more advantage to seniors as GUI is friendly, it will be
+                                easy for seniors to use and avoid loneliness.
+                            </td>
+                            <td>
+                                Virus Attacks -  Nothing in the world is 100% perfect.  
+                                When any downloads the stuff from third part websites like downloads YouTube 
+                                videos from third party website increases the risk of virus attacks. 
+                            </td>    
+                        </tr>
+                        <tr>
+                            <td>
+                                Multi-tasking – We all know how busy we are and need to work on different things at once. 
+                                <br/>For example, messaging, calling, running apps simultaneously.
+                                <br/>Operating system gives the advantage to work simultaneously and helps our day-to-day life to become easy.
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <br>
+    
+                    <p>
+                        •	There are many types of mobile OS, and all have their history.  Apple IOS – IOS which is owned/created by Apple Inc for iPhone devices.
+                        Today we have IOS 16.1 but their first IOS version was launched on June 29, 2007, when they released  the iPhone device alongside. 
+                        Second famous is Android  OS -  History of Android is old, Android was  the project in 2003 by Android Inc for digital cameras which would have the OS. 
+                        Later the project   got changed and instead of targeting digital camera they targeted in making OS for smartphones. Currently, in the market, the latest version of Android OS is Android 12. 
+                        Android was or is so much popular that in 81% of smartphones sold in 2015 was working on Android OS. Third famous is Windows OS. It is owned by the Microsoft. It’s a PC OS version for mobile devices. 
+                            The list goes more and more with Blackberry OS, Series 40 [S40] OS – Nokia Inc, Bada (Samsung Electronics), Symbian OS (Nokia) etc.
+                    </p>
+                    <p style="float: left;">
+                        •	Future is bright for mobile OS. As mobiles field is increasing day by day,
+                        technology is getting advance attracting more customers.
+                        Therefore, Mobile OS future is bright.<br/>
+    
+                    </p>
+                    <p style="float: left;">
+                        •	Photo below describes the timeline of operating systems used in the world till 2017. Add Two Images
+                    </p>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+
+
+                    <b style="text-align: centre;">Mobile Manufacturer</b>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <p > 
+                        <ul>
+                           
+                            <li><span>Manufacturer – My mobile phone Manufacturer is Apple</span></li>
+                                <li><span> Phone Model – Phone Model is 11 (iPhone 11).</span></li>
+                                <li><span> Photo -<br/>  </span></li>
+                                <li><span> Price -   CAD $875 is the price of my iPhone 11.</span></li>
+                                <li><span> Release Date – iPhone 11 was released on September 20,2019.</span></li>
+                                <li> <span>Operating System – iPhone 11 has IOS operating system.</span> </li>
+                                <li> <span>Chipset – My iPhone 11 has Apple A13 Bionic chip.</span></li>
+                                <li><span>Processor – My iPhone has  A13 Bionic processor.</span> </li>
+                                <li><span> Memory (RAM) – My phone has 4 GB RAM.</span> </li>
+                                <li><span>Memory (Internal) –  My iPhone 11 has 64 GB Internal Storage</span></li> 
+                                <li><span>Memory (External) – Cloud storage – 50 GB CAD $1.29 Per month.</span></li>
+                                <li><span>Display –  Liquid Retina HD display, 6.1-inch (diagonal) all-screen LCD Multi-Touch display with IPS technology, 1792-by-828-pixel resolution at 326 ppi, 1400:1 contrast ratio (typical), True Tone display, Wide color display (P3), Haptic Touch</span></li>
+                                <br/>
+                               
+                                <li><span>Camera (rear)  - Dual 12MP Wide and Ultra Wide cameras, Wide: ƒ/1.8 aperture, Ultra Wide: ƒ/2.4 aperture and 120° field of view, 2x optical zoom out, Digital zoom up to 5x, Portrait mode with advanced bokeh and Depth Control, Portrait Lighting with six effects (Natural, Studio, Contour, Stage, Stage Mono, High-Key Mono)</span></li><br/>
+                                <li><span>Camera (Front)  - 12MP True Depth front camera with Portrait mode, next-generation Smart HDR, 4K video recording up to 60 fps, and slo-mo video support for 1080p at 120 fps</span></li>
+                                <li><span>GPS – Built-in GPS</span></li>
+                                <li><span>Battery – Up to 17 hours video playback; up to 10 hours video playback.</span></li>
+                                <li><span>Network – Virgin</span></li>
+                                <li><span>Browser – My phone includes safari, Microsoft edge browsers </span></li>
+                                <li><span>2 other features – Apple Pay, Back Tap feature.</span></li> 
+
+                           
+                        </ul>
+                    </p>
+                    <b style="text-align: centre;">Mobile Plans</b>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <p > 
+                        <ul>
+
+                            <li><span>My service provider is Virgin Plus.</span></li>
+                            <li><span>Plan –  Sweet Pay 56 - 10GB</span></li>
+                            <li><span>Calls – I get Canada-Wide Calling, Call Waiting, 3-way Calling, 1000 mins International 
+                                Calling (countries include  - India, Germany, China, Hong Kong, Bangladesh, 
+                                United Kingdom, Italy, Mexico, Australia, South Korea, Taiwan, Japan, Malaysia & Singapore )</span></li>
+                                <br/>
+                              
+                            <li><span>Data – My plan includes 10 GB Data, Additional Data - $13/100MB up to 800MB, $0.15/MB thereafter</span></li>
+                            <li><span>Messaging – My service Provider provides Us/ International Text, Unlimited Picture & Video Messaging,</span></li>
+                            <li><span>Global Texting – Yes, my plan includes US/ International Text feature.</span></li>
+                            <li><span>Voice Mail – Yes, my plan also includes the voice mail feature.</span></li>
+                            <li><span>Call features – 3 way calling, call waiting call forwarding are the call features included in my plan</span></li>
+                            <li><span>Fees - $56.00 / month Is the fees which I pay per month for the plan.</span></li>
+                            <li><span>Coverage – Canada wide. International with extra charges.</span></li>
+                            <li><span>2 other feature – Unlimited incoming text, unlimited incoming calls</span></li>
+
+                        </ul>
+
+                    </p>
+                    <b style="text-align: centre;">References</b>
+                    <p>
+                        <ul>
+                            <li><span>Roomi, M. (2021, February 24). 5 advantages and disadvantages of operating system: Limitations & benefits of Operating System. HitechWhizz. Retrieved September 23, 2022, from https://www.hitechwhizz.com/2021/02/5-advantages-and-disadvantages-limitations-benefits-of-operating-system.html  </span></li>
+                            <br/><br/>
+                            <li><span>SP, V. (2022, February 22). Top 8 mobile operating systems: Mobile OS options 2022. ProBlogBooster. Retrieved September 23, 2022, from https://www.problogbooster.com/2016/02/Top-Mobile-Operating-Systems-Mobile-OS-Overview-Guide.html  </span></li>
+                            <br/><br/><br/>
+                            <li><span>Android facts. Math. (n.d.). Retrieved September 23, 2022, from https://www.softschools.com/facts/technology/android_facts/3354/#:~:text=Android%20has%20an%20app%20store,smartphone%20users%20across%20the%20country  </span></li>
+                            <br/><br/>
+                             <li><span>Encyclopædia Britannica, inc. (n.d.). Android. Encyclopædia Britannica. Retrieved September 23, 2022, from https://www.britannica.com/technology/Android-operating-system</span></li>
+                            <li><span>Sage, E. at. (2019, December 10). Mobile OS - a two-player game. Medium. Retrieved September 23, 2022, from https://medium.com/sagefuturemakers/mobile-os-a-two-player-game-e6c59dcb0f5f  </span></li>
+                            <li><span>Which is the most secure phone os? Intelice Solutions. (2022, September 1). Retrieved September 23, 2022, from https://www.intelice.com/secure-phone-os/</span></li>
+                            <li><span>Wikimedia Foundation. (2022, September 22). IOS version history. Wikipedia. Retrieved September 23, 2022, from https://en.wikipedia.org/wiki/IOS_version_history</span></li>
+                            <br/>
+                            <p><b>
+                                Second Photo on mobile OS reference  (Photo taken from this website. Only visited this website for image)
+                            </p></b>
+                            <li><span>Written by: Racheal Koh | Last updated on February , Written by: Racheal Koh, Juliet Ancing | March 8, Ancing, J., Albert de Venecia | February 18, Venecia, A. de, Kenneth Long | September 28, Long, K., Racheal Koh | September 30, Koh, R., Racheal Koh | September 18, Rexan | August 12, Rexan, Rodora Garcia | March 18, Garcia, R., Pia | March 28, Pia, Racheal Koh | October 11, Rexan | October 25, … Ancing, J. (2021, February 4). Best & latest updates on mobile operating systems [Android, IOS, kaios]. CellularNews. Retrieved September 23, 2022, from https://cellularnews.com/mobile-operating-systems/best-mobile-os/</span></li>
+                            <br/><br/><br/>
+                            <p><b>First Photo on mobile OS reference  (Photo taken from this website)</b></p>
+                            <li><span>•	Wikimedia Foundation. (2022, September 22). Mobile operating system. Wikipedia. Retrieved September 23, 2022, from https://en.wikipedia.org/wiki/MoIOSbile_operating_system</span></li>
+
+                        </ul>
+                    </p>
+              </div>
+              <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <br/>
+                <h4 class="card-title">Lab 2</h4>
+                <p class="card-text">
+                    Name : Devanshu Dave <br/>
+                    Course Code : MODE 4201<br/>
+                    Student ID : 100785733<br/>
+                    Title : Lab 2 – Individual work<br/>
+                    Date – 05/10/2022<br/>
+                    
+                </p>
+                <br/>
+                <br/>
+                <p><b>Part 2 - Third Party Android Emulator Installation and Testing</b><br/><br/>
+                <br/>
+                <br/>
+                <video  controls style=" width: 50%;
+                height: auto; margin-left: 300px;">
+                  <source src="./image/DevanshuDavePart2.mp4" type="video/mp4">
+                 
+                Your browser does not support the video tag.
+                </video><br/>
+
+                <i>Video - Showing two .apk files on BlueStacks App Player (Emulator)</i>
+
+                </p>
+                <br/>
+                <br/>
+                
+                <p>
+                <b>Part 3 - Mobile Application Development Tool</b><br/><br/>
+                <br/>
+                    <br/>
+                    <br/>
+                    <div class="container">
+                        <h2>Android Studio</h2>
+                        <br/>
+                        <ul class="list-group">
+                          <li class="list-group-item">Tool Name : Android Studio</li>
+                          <li class="list-group-item">Platform : Android</li>
+                          <li class="list-group-item">Application Development Type : </li>
+                          <li class="list-group-item">Website : <a href="https://developer.android.com/" target="_blank">Android Studio</a> </li>
+                          <li class="list-group-item">Developers : Google, JetBrains</li>
+                          <li class="list-group-item">Release Date : June 2014 </li>
+                          <li class="list-group-item">License :  </li>
+                          <li class="list-group-item">Price : Android Studio Tool is free to download. Even with that, this tool also provides the free plugins.</li>
+                          <li class="list-group-item">Programming Language(s) : list all the languages used to develop
+                          an app : Android Studio supports many programming languages which is used to develop an app. Java, C++, Go. Android Studio 
+                        3.0 and later supports kotlin and all Java 7 language feature, Java 8 language features. Android Studio states that it supports all released Java versions.</li>
+
+                        <li class="list-group-item">Features : Android Studio provides Fast Emulator. Along with that it also provides Insightful APK Analyzer, Compose Design tools, 
+                          Flexible build system, Real-time profilers,Instant App Run, Visual Layout Editor, Intelligence Code Editor, KOTLIN Support, </li>
+                          <li class="list-group-item">Debugger: Android Studio provides a debugger which helps the developer to debug an app y allowing 
+                            the developer to put and breakpoints and analyze the variables and steps (step-by-step) in a runtime.
+                          </li>
+                          <li class="list-group-item">Built-in Emulator: Yes, Android Studio Does provides the Built in Emulator in which it helps the developer
+                            to test an app in real time virtually and als gives ability to run on any devices. 
+                          </li>
+                          <li class="list-group-item"><b>Host machine requirements in terms of hardware (processor,
+                            main memory, hard drive storage, etc.) and software (Operating
+                            system, editors, any other software needed) </b>: Windows
+                            64-bit Microsoft® Windows® 8/10
+                            x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a Windows Hypervisor
+                            8 GB RAM or more
+                            8 GB of available disk space minimum (IDE + Android SDK + Android Emulator)
+                            1280 x 800 minimum screen resolution. MAC OS :- MacOS® 10.14 (Mojave) or higher
+                            ARM-based chips, or 2nd generation Intel Core or newer with support for Hypervisor.Framework
+                            8 GB RAM or more
+                            8 GB of available disk space minimum (IDE + Android SDK + Android Emulator)
+                            1280 x 800 minimum screen resolution.
+                            <br/>
+                            Software requirement - It works on Windows, Mac, Linux and Chrome operating system.  Internet connection is required. 
+                            </li>
+                            <li class="list-group-item"><b> Integrated Development Environment (IDE) – does it have an IDE or
+                              use any editor ( notepad++) to create the code</b> : Yes, it has IntelliJ IDEA
+                              IDE which helps to write the code.</li>
+                              <li class="list-group-item"><b> Software to be installed on the host machine before you can create
+                                an app</b>: Android Studio Tool</li>
+                                <li class="list-group-item"><b>Advantages:</b></li>
+                                <li class="list-group-item"><b>DisAdvantages:</b></li>
+                                <li class="list-group-item"><b>Language availability (like English, French, etc.)</b></li>
+                                <li class="list-group-item"><b> Uploading and Selling an App – Do you need to pay any license fee
+                                  to upload the apps? If so, how much, steps involved in selling an
+                                  app along with the dollars and cents as a share</b></li>
+                                  <li class="list-group-item"><b>Third –party emulator which can be linked to the tool : Select an
+                                    emulator and explain in detail</b></li>
+                                    <li class="list-group-item"><b>Market Share</b></li>
+                                    <li class="list-group-item"><b>Number of apps available</b></li>
+                                    <li class="list-group-item"><b>Number of downloads/users if applicable</b></li>
+                                    <li class="list-group-item"><b>Any other two properties not listed above</b></li>
+
+                        </ul>
+                      </div>
+                    
+                 
+              </div>
+             </div>
+        </div>
+    </div>
+  </body>
+</html>

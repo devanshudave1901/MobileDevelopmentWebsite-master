@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <style>
+      .navbar-nav {
+        margin-left: auto;
+        font-size: 23px;
+      }
+      .welcomeHeading {
+        text-shadow: 2px 2px red;
+        text-align: center;
+      }
+      .welcomeText {
+        text-align: center;
+        font-family: "Sofia", sans-serif;
+      }
+      .featurette-heading {
+        font-weight: 300;
+        line-height: 1;
+        letter-spacing: -0.05rem;
+        margin-top: 20%;
+      }
+      .profileIamge {
+        width: 250px;
+
+        left: 300px;
+      }
+      .mobileDevProfile {
+        margin-top: 10%;
+        left: 100px;
+      }
+      .main {
+        display: flex;
+        flex-wrap: nowrap;
+        height: 100vh;
+        height: -webkit-fill-available;
+        max-height: 100vh;
+        overflow-x: auto;
+        overflow-y: hidden;
+      }
+      .sideBar {
+        height: 870px;
+      }
+    </style>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <title>Mobile Development - Lab 2</title>
+  </head>
+  <body>
+    <div id="navBar">
+      <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Devanshu Dave</a>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav" mr-auto>
+            <li class="nav-item active">
+              <a class="nav-link" href="./index.html"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./course.html">Course</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div id="sideBar">
+        <div
+        class="d-flex flex-column flex-shrink-0 p-3 bg-light sideBar"
+        style="width: 280px"
+      >
+        <a
+          href="/"
+          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none"
+        >
+          <svg class="bi me-2" width="40" height="32">
+            <use xlink:href="#bootstrap" />
+          </svg>
+          <span class="fs-4">Home</span>
+        </a>
+        <hr />
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li>
+            <a href="index.html" class="nav-link link-dark">
+              <svg class="bi me-2" width="16" height="16">
+                <use xlink:href="#table" />
+              </svg>
+              Classwork
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="labs.html" class="nav-link" aria-current="page">
+              <svg class="bi me-2" width="16" height="16">
+                <use xlink:href="#home" />
+              </svg>
+              Labs
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link link-dark">
+              <svg class="bi me-2" width="16" height="16">
+                <use xlink:href="#speedometer2" />
+              </svg>
+              Project
+            </a>
+          </li>
+        </ul>
+        <hr />
+      </div>
+      <br />
+      <br />
+      <br />
+    </div></div>
+    <div id="mainBar"> 
+        <div class="jumbotron">
+            <h1>Labs Of Mobile Development 4201</h1>
+  
+            <div class="card text-center id="nav-tab" role="tablist"">
+                <div class="card-header">
+                  <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                      <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true" >Lab 1</a>
+                    </li>
+                    <li class="nav-item">
+                      <a  class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Lab 2</a>
+                    </li>
+                    
+                  </ul>
+                </div>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="card-body tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"">
+                    <h5 class="card-title">Lab 1</h5>
+                    <p class="card-text">
+                        Name : Devanshu Dave <br/>
+                        Course Code : MODE 4201<br/>
+                        Student ID : 100785733<br/>
+                        Title : Lab 1 – Individual work<br/>
+                        Date – 21/09/2022<br/>
+                        
+                    </p>
+                    <br/>
+                    <br/>
+                    <p>
+                    <b> Mobile Development – Mobile Operating System</b><br/><br/>
+                        
+                        •	When we go to the shop for purchasing the mobile device, now a days most common question we hear is “Do you prefer android or IOS?”. Now the question arises, what is exactly android and IOS. What’s the point to ask?. Well, to answer this question we have to dig more into the dept. But in short, Android and IOS are the part of types from many in mobile Operating systems. <br/>They are the main part which can change the user experience to use Mobile device. Its also a path between software and hardware part of the mobile device. <br/><br/><br/>
+                        •	Mobile Device is used in day-to-day life. From small things to big, mobiles have become the most important part of our life. To run the mobile device OS which is also known as Operating System is required. OS is very important part of the mobile device. Mostly Applications which run on the mobile is with the help of the OS present in the device. They are also known as communicator between software and hardware.<br/><br/>
+                        •	 There are various types of OS. But the two famous OS are Android and IOS. Most of the manufacturing companies have their own OS. Android devices (many manufacturing companies) have android OS. For example, Apple mobile phones have their own IOS which helps to run the iPhone devices. Android OS is used in Android devices like Samsung, Oppo, Vivo, MI etc.<br/><br/>
+                        •	 There are many advantages of Mobile Operating system. Along with that where there are advantages there are also disadvantages. <br/>
+    
+                    </p>
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                        
+                            <th scope="col">Advantages</th>
+                            <th scope="col">Disadvantages</th>
+                            
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            
+                            <td>Operating System helps us to run the mobile devices. 
+                                Or with the help of OS, we can use Mobile device in an 
+                                easy way in day-to-day life</td>
+                            <td>Costly. One of the disadvantage is that it is costly. 
+                                Though OS is an open source, but it costs the companies more.
+                                According to the survey, it states that the specific OS is costing providers more to service.</td>
+                        </tr>
+                        <tr>
+                            <td>Second Advantage is Security. Every OS provides their own security to protect the data  <br/>and has different ways to defend the hacking on mobile devices.
+                                <br/> For example, according to what I heard or experienced,<br/> Apple doesn’t allow many features ( apps or websites to access) in compared to android.<br/>
+                                Every operating system provides the security, IOS is considered as the most secured OS than any other.
+                                <br/>   “ According to Kaspersky Labs, nearly 1/3 of all mobile malware infections come from malicious SMS messages aimed at stealing personal information or money from people’s accounts. <br/>“ IOS secures the mobile device more than Android.
+                                As mentioned above, IOS secures and restricts the activity that is a threat than android.”</td>
+                            <td>  Complexity -  Various systems uses many languages in backend to run the OS on mobile devices. 
+                                <br/>  Like C++, Java, Kotlin etc. and can not be understood by any non-programmers.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                User Friendly – Though having GUI interface costs more and can be
+                                considered as a disadvantage. <br/>But that interface is a user friendly is considered as an advantage. 
+                                <br/> It gives more advantage to seniors as GUI is friendly, it will be
+                                easy for seniors to use and avoid loneliness.
+                            </td>
+                            <td>
+                                Virus Attacks -  Nothing in the world is 100% perfect.  
+                                When any downloads the stuff from third part websites like downloads YouTube 
+                                videos from third party website increases the risk of virus attacks. 
+                            </td>    
+                        </tr>
+                        <tr>
+                            <td>
+                                Multi-tasking – We all know how busy we are and need to work on different things at once. 
+                                <br/>For example, messaging, calling, running apps simultaneously.
+                                <br/>Operating system gives the advantage to work simultaneously and helps our day-to-day life to become easy.
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <br>
+    
+                    <p>
+                        •	There are many types of mobile OS, and all have their history.  Apple IOS – IOS which is owned/created by Apple Inc for iPhone devices.
+                        Today we have IOS 16.1 but their first IOS version was launched on June 29, 2007, when they released  the iPhone device alongside. 
+                        Second famous is Android  OS -  History of Android is old, Android was  the project in 2003 by Android Inc for digital cameras which would have the OS. 
+                        Later the project   got changed and instead of targeting digital camera they targeted in making OS for smartphones. Currently, in the market, the latest version of Android OS is Android 12. 
+                        Android was or is so much popular that in 81% of smartphones sold in 2015 was working on Android OS. Third famous is Windows OS. It is owned by the Microsoft. It’s a PC OS version for mobile devices. 
+                            The list goes more and more with Blackberry OS, Series 40 [S40] OS – Nokia Inc, Bada (Samsung Electronics), Symbian OS (Nokia) etc.
+                    </p>
+                    <p style="float: left;">
+                        •	Future is bright for mobile OS. As mobiles field is increasing day by day,
+                        technology is getting advance attracting more customers.
+                        Therefore, Mobile OS future is bright.<br/>
+    
+                    </p>
+                    <p style="float: left;">
+                        •	Photo below describes the timeline of operating systems used in the world till 2017. Add Two Images
+                    </p>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+
+
+                    <b style="text-align: centre;">Mobile Manufacturer</b>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <p style="float:left"> 
+                        <li>
+                        <br/>
+                        •	Manufacturer – My mobile phone Manufacturer is Apple.<br/>  <br/>  
+                        •	Phone Model – Phone Model is 11 (iPhone 11). <br/>
+                        •	Photo -<br/> 
+                        •	Price -   CAD $875 is the price of my iPhone 11.<br/> 
+                        •	Release Date – iPhone 11 was released on September 20,2019.<br/> <br/> 
+                        •	Operating System – iPhone 11 has IOS operating system.<br/> <br/> 
+                        •	Chipset – My iPhone 11 has Apple A13 Bionic chip.<br/> <br/> 
+                        •	Processor – My iPhone has  A13 Bionic processor.<br/> <br/> 
+                        •	Memory (RAM) – My phone has 4 GB RAM. <br/> <br/> 
+                        •	Memory (Internal) –  My iPhone 11 has 64 GB Internal Storage<br/> <br/> 
+                        •	Memory (External) – Cloud storage – 50 GB CAD $1.29 Per month.<br/> <br/> 
+                        •	Display –  Liquid Retina HD display, 6.1-inch (diagonal) all-screen LCD Multi-Touch display with IPS technology, 1792-by-828-pixel resolution at 326 ppi, 1400:1 contrast ratio (typical), True Tone display, Wide color display (P3), Haptic Touch<br/> <br/> 
+                        •	Camera (rear)  - Dual 12MP Wide and Ultra Wide cameras, Wide: ƒ/1.8 aperture, Ultra Wide: ƒ/2.4 aperture and 120° field of view, 2x optical zoom out, Digital zoom up to 5x, Portrait mode with advanced bokeh and Depth Control, Portrait Lighting with six effects (Natural, Studio, Contour, Stage, Stage Mono, High-Key Mono)<br/> <br/> 
+                        •	Camera (Front)  - 12MP True Depth front camera with Portrait mode, next-generation Smart HDR, 4K video recording up to 60 fps, and slo-mo video support for 1080p at 120 fps <br/> 
+                        •	GPS – Built-in GPS<br/> <br/> 
+                        •	Battery – Up to 17 hours video playback; up to 10 hours video playback. <br/>  <br/> 
+                        •	Network – Virgin<br/> <br/> 
+                        •	Browser – My phone includes safari, Microsoft edge browsers <br/> <br/> 
+                        •	2 other features – Apple Pay, Back Tap feature.<br/> <br/> 
+
+                    </li>
+
+                    </p>
+              </div>
+              <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+             </div>
+        </div>
+    </div>
+  </body>
+</html>
