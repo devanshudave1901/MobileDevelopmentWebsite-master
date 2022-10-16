@@ -30,7 +30,12 @@
 <!ELEMENT tester (#PCDATA)>
 <!ELEMENT documenter (#PCDATA)>
 <!ELEMENT clients (client*)>
+
 <!ELEMENT client (clientName,address,clientEmail,clientPhone)>
+<!ATTLIST client
+     clientid CDATA #REQUIRED
+
+>
 <!ELEMENT clientName (#PCDATA)>
 <!ELEMENT address (street?,city,country, postalCode?)>
 <!ELEMENT street (#PCDATA)>

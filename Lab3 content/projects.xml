@@ -34,7 +34,7 @@
 			</team>
 		</teams>
 		<clients>
-			<client>
+			<client clientid = "c12">
 				<clientName>Liam</clientName>
 				<address>
 					<street>22 CLIENT street</street>
